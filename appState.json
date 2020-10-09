@@ -1,0 +1,126 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "15e14172-e1cc-4676-ac48-de8dec72543d": {
+        "id": "15e14172-e1cc-4676-ac48-de8dec72543d",
+        "parent": null,
+        "name": "videoUploader.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "videoUploader.js",
+        "cursor": {
+          "lineNumber": 26,
+          "column": 54
+        },
+        "config": {
+          "runtime": "nodejs10.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "videoUploader"
+        },
+        "triggers": [
+          {
+            "resourceName": "httpApigvideoUploaderAPI",
+            "config": {
+              "defaultRoute": false,
+              "method": "PUT",
+              "route": "/upload"
+            }
+          }
+        ],
+        "testCases": {
+          "d09b99d0-f555-4a29-815e-be4f1a13873a": {
+            "id": "d09b99d0-f555-4a29-815e-be4f1a13873a",
+            "name": "Test event",
+            "functionId": "15e14172-e1cc-4676-ac48-de8dec72543d",
+            "event": "{\"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\"}",
+            "eventTemplate": "hello-world"
+          }
+        },
+        "lastUpdated": 1602204622338
+      }
+    },
+    "openFiles": [
+      "15e14172-e1cc-4676-ac48-de8dec72543d"
+    ],
+    "currentFileId": "15e14172-e1cc-4676-ac48-de8dec72543d",
+    "resources": {
+      "s3moviltiUserReviews": {
+        "name": "s3moviltiUserReviews",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "movilti-user-reviews"
+          }
+        }
+      },
+      "httpApigvideoUploaderAPI": {
+        "name": "httpApigvideoUploaderAPI",
+        "type": "API_GATEWAY",
+        "config": {
+          "apiType": 2,
+          "mode": 0,
+          "apiName": "videoUploaderAPI",
+          "stageName": "test"
+        }
+      }
+    },
+    "customTemplate": {
+      "syntax": "JSON",
+      "overrideDefault": false,
+      "dialect": "CloudFormation",
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "mime-types": {
+          "name": "mime-types",
+          "version": "2.1.27",
+          "dev": false,
+          "language": "nodejs"
+        },
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "language": "nodejs",
+          "version": "2.644.0",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "sigmaVersion": "1.4.3.1",
+    "projectName": "videoUploader",
+    "projectDescription": "Video Uplaoder",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "language": "nodejs",
+    "platformRegions": {},
+    "lastSave": 1602204662596
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "videouploader",
+      "url": "https://github.com/seshakiran/videouploader"
+    }
+  }
+}
